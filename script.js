@@ -38,14 +38,17 @@ showRectangle(5, 5);
 // Étape 1.3 : triangle d'étoiles
 
 function showRightTriangle(NLINE) {
-    // comment afficher des lignes qui "s'allongent" un peu plus à chaque itération ?
-const slash = "\\"
-  let stars = ""
-    for (i = 0; i < NLINE; i++){
-        console.log(slash)
-        stars += '*' 
-        console.log(stars + slash)
+  const slash = "\\";
+  let stars = "";
+  for (let i = 0; i < NLINE; i++) {
+    if (i === 0) {
+      console.log(slash); // Afficher \ seul pour la première itération
+    } else {
+      stars += "*";
+      console.log(stars + slash); // Afficher les étoiles suivies de \
     }
   }
-  
- showRightTriangle(5)
+}
+
+showRightTriangle(5);
+
