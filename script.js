@@ -1,16 +1,5 @@
 // Étape 1 : un triangle d'étoiles
 
-function afficherPointeSapin(hauteur) {
-  // à remplir
-}
-
-//   afficherPointeSapin(4)
-
-//   +
-//  /|\
-// /*|*\
-///**|**\
-
 // Étape 1.1 : une ligne d'étoiles
 
 function showStars(NSTARS) {
@@ -51,4 +40,16 @@ function showRightTriangle(NLINE) {
 }
 
 showRightTriangle(5);
+
+// Étape 1.4 : seconde moitié et espaces
+function showLeftTriangle(NLINE) {
+  for (let i = 0; i < NLINE; i++) {
+    let spaces = " ".repeat(NLINE - i - 1); // Ajoute les espaces nécessaires
+    let stars = "*".repeat(i); // Ajoute les étoiles nécessaires
+    console.log(spaces + "/" + stars); // Affiche les espaces, le slash et les étoiles
+  }
+}
+
+showLeftTriangle(5);
+
 
